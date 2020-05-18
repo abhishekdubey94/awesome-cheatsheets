@@ -8,6 +8,28 @@
 # BASICS
 # *****************************************************************************
 
+# Install the psql
+# Create a new user 
+	adduser postgres
+# Create a directory for data_directory. 
+	mkdir /data/pg_data
+# Update this data directory in config file (config_file=/etc/postgresql/9.3/main/postgresql.conf).
+
+# change the owner of the data file   
+	chown postgres /data/pg_data
+# start the user postgres  
+    su - postgres
+# All the commands are present in 
+    cd /usr/lib/postgresql/9.3/bin
+# Initialise the db 
+	./initdb -D /data/pg_data
+# Start the server 
+	./postgres -D /data/pg_data >logfile 2>&1 &
+# Create the db 
+	./createdb test
+# psql shell 
+	./psql test
+
 # When it's first installed, PostgreSQL just has the 'postgres' user, 
 # and the way to initially enter PostgreSQL is by typing  
 
