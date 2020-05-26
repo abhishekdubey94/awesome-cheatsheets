@@ -51,3 +51,11 @@
 # Lastly, with pgAdmin4 we need to create a connection with the server the first time we use it, 
 # and this is done by right-clicking 'Servers' on the left pane, and choosing 'Create' > 'Server'. 
 # We give our server a name, and in the 'Connection' tab we type in 'localhost' as the host and save.
+
+# SQL Commands
+# CREATE TABLE table_name (column1 dataType,column2 dataType);
+# INSERT INTO table_name (column1,column2) VALUES (value1,value2);
+# SELECT * FROM table_name;
+# ALTER TABLE table_name ADD columnName dataType;
+# UPDATE table_name SET columnName = someValue WHERE otherColumnName = someOtherValue;
+
